@@ -9,6 +9,15 @@ import SocialsComponent from '/src/Components/SocialsComponent'
 
 
 import { IoLogoJavascript } from "react-icons/io5";
+import { FaReact } from "react-icons/fa";
+import { TbBrandCpp } from "react-icons/tb";
+import { SiTailwindcss } from "react-icons/si";
+import { FaNode } from "react-icons/fa6";
+import { SiExpress } from "react-icons/si";
+import { SiMongodb } from "react-icons/si";
+
+
+
 import { Button, Card } from '@material-tailwind/react';
 import { NavLink } from 'react-router-dom';
 import { SimpleFooter } from './Components/SimpleFooter';
@@ -63,25 +72,28 @@ function App() {
             {/* <TeckCarousel /> */}
             <div className='flex items-center justify-center gap-20 flex-wrap'>
               <div>
-                <IoLogoJavascript className='text-7xl text-black' />
+              <TbBrandCpp className='text-7xl text-black' />
+       
               </div>
               <div>
-                <IoLogoJavascript className='text-7xl text-black' />
+              <IoLogoJavascript className='text-7xl text-black' />
+              
               </div>
               <div>
-                <IoLogoJavascript className='text-7xl text-black' />
+              <FaReact className='text-7xl text-black'/>
+                
               </div>
               <div>
-                <IoLogoJavascript className='text-7xl text-black' />
+                <SiTailwindcss className='text-7xl text-black' />
               </div>
               <div>
-                <IoLogoJavascript className='text-7xl text-black' />
+                <FaNode className='text-7xl text-black' />
               </div>
               <div>
-                <IoLogoJavascript className='text-7xl text-black' />
+                <SiExpress className='text-7xl text-black' />
               </div>
               <div>
-                <IoLogoJavascript className='text-7xl text-black' />
+                <SiMongodb className='text-7xl text-black' />
               </div>
             </div>
           </div>
