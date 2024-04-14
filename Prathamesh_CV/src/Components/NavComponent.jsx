@@ -6,7 +6,7 @@ import {
   IconButton,
 } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
- 
+
 function NavList() {
   return (
     <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
@@ -16,7 +16,7 @@ function NavList() {
         color="blue-gray"
         className="p-1 font-medium"
       >
-        <a href="#" className="flex items-center hover:text-blue-500 transition-colors">
+        <a href="#skills" className="flex font-redhatmono text-lg font-medium items-center hover:text-red-500 hover:underline transition-all">
           Skills
         </a>
       </Typography>
@@ -26,7 +26,7 @@ function NavList() {
         color="blue-gray"
         className="p-1 font-medium"
       >
-        <a href="#" className="flex items-center hover:text-blue-500 transition-colors">
+        <a href="#projects" className="flex font-redhatmono text-lg font-medium items-center hover:text-red-500 hover:underline transition-all">
           Projects
         </a>
       </Typography>
@@ -36,7 +36,7 @@ function NavList() {
         color="blue-gray"
         className="p-1 font-medium"
       >
-        <a href="#" className="flex items-center hover:text-blue-500 transition-colors">
+        <a href="#contact" className="flex items-center text-lg font-medium hover:text-red-500 hover:underline transition-all">
           Contact
         </a>
       </Typography>
@@ -53,29 +53,29 @@ function NavList() {
     </ul>
   );
 }
- 
+
 export default function NavbarSimple() {
   const [openNav, setOpenNav] = React.useState(false);
- 
+
   const handleWindowResize = () =>
     window.innerWidth >= 960 && setOpenNav(false);
- 
+
   React.useEffect(() => {
     window.addEventListener("resize", handleWindowResize);
- 
+
     return () => {
       window.removeEventListener("resize", handleWindowResize);
     };
   }, []);
- 
+
   return (
-    <Navbar className=" mx-9  px-3 py-2 w-auto">
-      <div className="flex items-center justify-between text-blue-gray-900">
+    <Navbar className="container mx-auto bg-transparent border-none shadow-none rounded-none">
+      <div className=" flex items-center justify-between text-blue-gray-900">
         <Typography
           as="a"
           href="#"
           variant="h6"
-          className="mr-4 cursor-pointer py-1.5"
+          className=" mr-4 cursor-pointer py-1.5 text-3xl font-extrabold"
         >
           PS
         </Typography>

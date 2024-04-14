@@ -12,8 +12,8 @@ export default withMT({
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Outfit", ...defaultTheme.fontFamily.sans],
-        outfit: ['Outfit', 'sans-serif']
+        sans: ["Red Hat Mono", ...defaultTheme.fontFamily.sans],
+        redhatmono: ['Red Hat Mono', 'sans-serif']
       }
     },
   },
