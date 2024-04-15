@@ -21,7 +21,7 @@ import { SiMongodb } from "react-icons/si";
 import { Button, Card } from '@material-tailwind/react';
 import { NavLink } from 'react-router-dom';
 import { SimpleFooter } from './Components/SimpleFooter';
-
+import { motion } from "framer-motion"
 
 import imageOne from './assets/Screenshot 2024-04-14 211044.png'
 import imageTwo from './assets/Screenshot 2024-04-14 211143.png'
@@ -46,14 +46,21 @@ function App() {
 
         <section className='mt-20'>
           <div className="container grid grid-cols-1 lg:grid-cols-2 gap-10 mx-auto">
-            <div className="flex w-full  justify-center ">
-              <img className='w-1/2 rounded-full h-auto border-2 border-black'
+            <div 
+            
+            className="flex w-full  justify-center ">
+              <motion.img className='w-1/2 rounded-full h-auto border-2 border-black'
                 src="../src/assets/PrathameshImage.png"
                 alt="card-image"
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
               />
             </div>
             <div className="container grid w-full content-center place-items-center">
-              <h1 className=" font-bold text-center animate-bounce text-6xl">Hi</h1>
+              <h1
+              
+              className=" font-bold text-center animate-bounce text-6xl">Hi</h1>
               <h2 className="text-6xl font-semibold text-center animate-pulse ">I'm Prathamesh</h2>
               <p className="text-gray-700 mt-4 text-1xl"> Third year engineering student at PICT,Pune </p>
               <Button className='py-2 px-10 rounded-full text-lg shadow-2xl mt-8' variant='gradient'>
@@ -71,30 +78,58 @@ function App() {
             <h1 className=' text-4xl font-extrabold uppercase underline text-center mb-20'>Technical Skills </h1>
             {/* <TeckCarousel /> */}
             <div className='flex items-center justify-center gap-20 flex-wrap'>
-              <div>
+              <motion.div
+              initial={{ opacity: 0, y:75 }}
+              whileInView={{ opacity: 1, y:0 }}
+              transition={{ duration: 0.5 }}
+              >
               <TbBrandCpp className='text-7xl text-black' />
        
-              </div>
-              <div>
+              </motion.div>
+              <motion.div
+              initial={{ opacity: 0, y:75 }}
+              whileInView={{ opacity: 1, y:0 }}
+              transition={{ duration: 0.5 }}
+              >
               <IoLogoJavascript className='text-7xl text-black' />
               
-              </div>
-              <div>
+              </motion.div>
+              <motion.div
+              initial={{ opacity: 0, y:75 }}
+              whileInView={{ opacity: 1, y:0 }}
+              transition={{ duration: 0.5 }}
+              >
               <FaReact className='text-7xl text-black'/>
                 
-              </div>
-              <div>
+              </motion.div>
+              <motion.div
+              initial={{ opacity: 0, y:75 }}
+              whileInView={{ opacity: 1, y:0 }}
+              transition={{ duration: 0.5 }}
+              >
                 <SiTailwindcss className='text-7xl text-black' />
-              </div>
-              <div>
+              </motion.div>
+              <motion.div
+              initial={{ opacity: 0, y:75 }}
+              whileInView={{ opacity: 1, y:0 }}
+              transition={{ duration: 0.5}}
+              >
                 <FaNode className='text-7xl text-black' />
-              </div>
-              <div>
+              </motion.div>
+              <motion.div
+              initial={{ opacity: 0, y:75 }}
+              whileInView={{ opacity: 1, y:0 }}
+              transition={{ duration: 0.5 }}
+              >
                 <SiExpress className='text-7xl text-black' />
-              </div>
-              <div>
+              </motion.div>
+              <motion.div
+              initial={{ opacity: 0, y:75 }}
+              whileInView={{ opacity: 1, y:0 }}
+              transition={{ duration: 0.5}}
+              >
                 <SiMongodb className='text-7xl text-black' />
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -109,7 +144,7 @@ function App() {
                 </Card>
                 <div className='flex flex-col items-start gap-6 justify-start'>
                   <p className='text-lg font-medium text-black tracking-wider'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, dignissimos. Error neque eum, quidem culpa deserunt optio dicta ad nulla, architecto itaque, ut nesciunt eveniet exercitationem voluptatem aperiam necessitatibus adipisci.
+                  CampusNotes connects you to a collaborative network of classmates, offering a treasure trove of organized and comprehensive notes for all your courses.
                   </p>
                   <div className='flex items-center gap-8'>
                     <Button size='md'>Know more</Button>
@@ -125,7 +160,7 @@ function App() {
                 </Card>
                 <div className='flex flex-col items-start gap-6 justify-start'>
                   <p className='text-lg font-medium text-black tracking-wider'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, dignissimos. Error neque eum, quidem culpa deserunt optio dicta ad nulla, architecto itaque, ut nesciunt eveniet exercitationem voluptatem aperiam necessitatibus adipisci.
+                  Billify is an innovative online billing platform designed specifically for restaurant owners. It simplifies the billing process by digitizing and automating every aspect, from order entry to payment collection
                   </p>
                   <div className='flex items-center gap-8'>
                     <Button size='md'>Know more</Button>
@@ -141,7 +176,7 @@ function App() {
                 </Card>
                 <div className='flex flex-col items-start gap-6 justify-start'>
                   <p className='text-lg font-medium text-black tracking-wider'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, dignissimos. Error neque eum, quidem culpa deserunt optio dicta ad nulla, architecto itaque, ut nesciunt eveniet exercitationem voluptatem aperiam necessitatibus adipisci.
+                  Struggling to harness the full potential of your wind farm? We can help. Our platform uses advanced AI to predict power generation, optimize turbine performance, and deliver in-depth analytics. Unleash the wind's power and maximize your wind farm's potential.
                   </p>
                   <div className='flex items-center gap-8'>
                     <Button size='md'>Know more</Button>
